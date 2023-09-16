@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+;
+
+html {
+    background: #000;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111111;
+    overflow: hidden;
+    margin: 0;
+
+}
+
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    box-shadow: 0 0 250px #000;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+
+}
+
+.container {
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5% 0% 5% 0%;
+    border: none;
+
+}
+
+.inputbox {
+    position: relative;
+    width: 100%;
+    padding-left: 0%;
+    padding: 3%;
+}
+
+.inputbox input {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    background: #333;
+    padding: 25px 13px 7.5px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    padding: 5% 5% 5% 5%;
+    color: gray;
+    transition: .4s;
+    font-size: 15px;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    transform: translate(-25px, -34px);
+    font-size: 12px;
+    color: #fff;
+}
+
+
+.inputbox .mata {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(450%, -45%);
+    padding: 5% 5% 5% 5%;
+    color: gray;
+    transition: .4s;
+    font-size: 15px;
+    pointer-events: auto;
+}
+
+
+.tombol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.link a {
+    text-decoration: none;
+}
+/*  danger alert ==================== */
+.alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+
+}
+
+.alert-danger {
+    background-color: transparent;
+    border-color: #ebccd1;
+    color: #e0287d;
+    text-align: center; 
+}
