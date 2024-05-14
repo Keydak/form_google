@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h1> Hacked By Keydak</h1>
                 <hr class="hr">
                 <div class="container">
-                    <p class="text1">Kapan TI GLOBAL ngadain valorant????????????????????</p>
+                    <p class="text1">halo pak :D, kok bapak ngeblock ip wifi saya? jangan di block dong saya cuma penge main-main sama pak ambara hehe :D (saya dari anak TI juga kalo mau panggil saya di sekolah gpp)</p>
                 </div>
             </div>
         </body>
