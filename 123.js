@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     document.addEventListener('DOMContentLoaded', function() {
-        var text = "you need to improve the security system on your site";
+        var text = "Your Sistem Is LOW!!!";
         var textElement = document.querySelector('.text1');
         var index = 0;
 
@@ -40,12 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 textElement.textContent += text.charAt(index);
                 index++;
                 setTimeout(type, 150);
-            } else {
-                setTimeout(() => {
-                    textElement.textContent = '';
-                    index = 0;
-                    type();
-                }, 1000); // Pause before restarting
             }
         }
 
