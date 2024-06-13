@@ -120,12 +120,11 @@ html {
 
 
 .text1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    animation: typing 4s steps(30, end), fadeOut 4s 6s forwards;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: monospace;
+    animation: typing 4s steps(30, end);
 }
 
 @keyframes typing {
@@ -133,10 +132,25 @@ html {
     to { width: 100% }
 }
 
-@keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+.container {
+    overflow: hidden;
+    position: relative;
 }
+
+.text-fade-out {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Adjust to match your background */
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    0% { width: 100%; }
+    100% { width: 0; }
+} 
 
 /* .text1 {
     display: inline-block;
