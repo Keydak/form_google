@@ -40,8 +40,9 @@ document.addEventListener('DOMContentLoaded', function () {
                             setTimeout(type, 150);
                         } else {
                             setTimeout(() => {
-                                textElement.style.opacity = 0;
-                                index = 0;
+                                 textElement.textContent -= text.charAt(index);
+                            index--;
+                            setTimeout(type, 150);
                                 textElement.textContent = '';
                                 setTimeout(() => {
                                     textElement.style.opacity = 1;
