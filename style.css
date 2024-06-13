@@ -52,7 +52,7 @@ html {
     text-shadow: 2px 2px 2px 2px green;
 }
 
-.text1 {
+.text1,.typewriter {
     padding: 5px;
     text-transform: uppercase;
     color: green;
