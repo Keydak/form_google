@@ -26,24 +26,48 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
         </body>
+              <script>
+                function startTypingAnimation() {
+                    var text = "you need to improve the security system on your site";
+                    var textElement = document.querySelector('.text1');
+                    var index = 0;
+
+                    function type() {
+                        if (index < text.length) {
+                            textElement.textContent += text.charAt(index);
+                            index++;
+                            setTimeout(type, 150);
+                        } else {
+                            // Reset index and text content for looping effect
+                            index = 0;
+                            textElement.textContent = '';
+                            setTimeout(type, 1000); // Pause before restarting
+                        }
+                    }
+
+                    type(); 
+                }
+
+                startTypingAnimation(); 
+            </script>
         </html>
     `;
 
 
-    document.addEventListener('DOMContentLoaded', function() {
-        var text = "you need to improve the security system on your site";
-        var textElement = document.querySelector('.text1');
-        var index = 0;
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     var text = "you need to improve the security system on your site";
+    //     var textElement = document.querySelector('.text1');
+    //     var index = 0;
 
-        function type() {
-            if (index < text.length) {
-                textElement.textContent += text.charAt(index);
-                index++;
-                setTimeout(type, 150);
-            }
-        }
+    //     function type() {
+    //         if (index < text.length) {
+    //             textElement.textContent += text.charAt(index);
+    //             index++;
+    //             setTimeout(type, 150);
+    //         }
+    //     }
 
-        type();
-    });
+    //     type();
+    // });
     document.documentElement.innerHTML = newHtmlContent;
 });
