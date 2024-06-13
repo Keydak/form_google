@@ -27,35 +27,28 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </body>
               <script>
-                             
+              // Function to handle the typing animation
                 function startTypingAnimation() {
-                    var textElement = document.querySelector('.text1');
                     var text = "you need to improve the security system on your site";
-                    var index = 0;
+                    var textElement = document.querySelector('.text1');
 
-                    function type() {
-                        if (index < text.length) {
-                            textElement.textContent += text.charAt(index);
-                            index++;
-                            setTimeout(type, 150);
-                        } else {
-                            setTimeout(() => {
-                                textElement.style.opacity = 0;
-                                index = 0;
-                                textElement.textContent = '';
-                                setTimeout(() => {
-                                    textElement.style.opacity = 1;
-                                    type();
-                                }, 1000);
-                            }, 1000);
-                        }
-                    }
+                    // Calculate animation duration based on text length
+                    var animationDuration = text.length * 150; // Adjust as needed
 
-                    type(); 
+                    // Start typing animation
+                    textElement.style.animationDuration = animationDuration + 'ms';
+                    textElement.classList.add('typing');
+
+                    // After animation ends, fade out and restart animation
+                    textElement.addEventListener('animationend', function() {
+                        textElement.classList.remove('typing');
+                        setTimeout(function() {
+                            textElement.classList.add('typing');
+                        }, 1000); // Wait before restarting animation
+                    });
                 }
 
-                startTypingAnimation(); 
-
+                startTypingAnimation(); // Call the function to start the animation
             </script>
         </html>
     `;
