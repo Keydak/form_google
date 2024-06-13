@@ -119,7 +119,7 @@ html {
 }
 
 
-/* .text1 {
+.text1 {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
@@ -136,9 +136,9 @@ html {
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: black }
-}      */
+}     
 
-.text1 {
+/* .text1 {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
@@ -155,4 +155,4 @@ html {
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: black }
-}
+} */
