@@ -40,6 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 textElement.textContent += text.charAt(index);
                 index++;
                 setTimeout(type, 150);
+            } else {
+                setTimeout(() => {
+                    textElement.textContent = '';
+                    index = 0;
+                    type();
+                }, 1000); // Pause before restarting
             }
         }
 
