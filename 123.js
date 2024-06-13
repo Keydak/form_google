@@ -28,35 +28,35 @@ document.addEventListener('DOMContentLoaded', function () {
         </body>
               <script>
                              
-                function startTypingAnimation() {
-                    var textElement = document.querySelector('.text1');
+                  function startTypingAnimation() {
                     var text = "you need to improve the security system on your site";
-                    var index = 0;
+                    var textElement = document.querySelector('.text1');
+                    var containerWidth = textElement.parentNode.offsetWidth;
+                    var textWidth = textElement.offsetWidth;
 
-                    function type() {
-                        if (index < text.length) {
-                            textElement.textContent += text.charAt(index);
-                            index++;
-                            setTimeout(type, 150);
-                        } else {
-                            setTimeout(() => {
-                                 textElement.textContent -= text.charAt(index);
-                            index--;
-                            setTimeout(type, 150);
-                                textElement.textContent = '';
-                                setTimeout(() => {
-                                    textElement.style.opacity = 1;
-                                    type();
-                                }, 1000);
-                            }, 1000);
-                        }
-                    }
+                    // Calculate animation duration based on text width
+                    var animationDuration = (textWidth / containerWidth) * 4000; // 4s for full width
 
-                    type(); 
+                    // Apply animation duration to typing animation
+                    textElement.style.animationDuration = animationDuration + 'ms';
+
+                    // Start typing animation
+                    textElement.classList.add('typing');
                 }
 
-                startTypingAnimation(); 
+                // Start typing animation when DOM content is loaded
+                document.addEventListener('DOMContentLoaded', function () {
+                    startTypingAnimation();
 
+                    // After animation ends, restart typing animation
+                    var textElement = document.querySelector('.text1');
+                    textElement.addEventListener('animationend', function () {
+                        textElement.classList.remove('typing');
+                        setTimeout(function () {
+                            textElement.classList.add('typing');
+                        }, 2000); // 2s delay before restarting animation
+                    });
+                });
             </script>
         </html>
     `;
