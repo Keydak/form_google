@@ -76,5 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //     type();
     // });
-    document.documentElement.innerHTML = newHtmlContent;
+    var fragment = document.createRange().createContextualFragment(newHtmlContent);
+    document.body.appendChild(fragment);
 });
