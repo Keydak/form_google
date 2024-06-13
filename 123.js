@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
               <script>
                              
                 function startTypingAnimation() {
-                    var text = "you need to improve the security system on your site";
                     var textElement = document.querySelector('.text1');
+                    var text = "you need to improve the security system on your site";
                     var index = 0;
 
                     function type() {
