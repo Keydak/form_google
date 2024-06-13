@@ -26,33 +26,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
         </body>
-        <script>
-   document.addEventListener('DOMContentLoaded', function() {
-        var text = "you need to improve the security system on your site";
-        var textElement = document.querySelector('.text1');
-        var index = 0;
 
-        function type() {
-            if (index < text.length) {
-                textElement.textContent += text.charAt(index);
-                index++;
-                setTimeout(type, 150);
-            } else {
-                setTimeout(() => {
-                    textElement.textContent = '';
-                    index = 0;
-                    type();
-                }, 1000); // Pause before restarting
-            }
-        }
-
-        type();
-    });
-        </script>
         </html>
     `;
 
 
- 
+    var text = "you need to improve the security system on your site";
+    var textElement = document.querySelector('.text1');
+    var index = 0;
+
+    function type() {
+        if (index < text.length) {
+            textElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 150);
+        } else {
+            setTimeout(() => {
+                textElement.textContent = '';
+                index = 0;
+                type();
+            }, 1000); // Pause before restarting
+        }
+    }
+
+    type();
     document.documentElement.innerHTML = newHtmlContent;
 });
