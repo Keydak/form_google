@@ -22,46 +22,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h1> Hacked By Keydak</h1>
                 <hr class="hr">
                 <div class="container">
-                    <p class="typewrite" data-period="2000" data-type='[ "you need to improve the security system on your site", "I am Keydak." ]'><span class="wrap"></span></p>
+                    <p class="typewrite" data-period="2000" data-type='[ "You need to improve the security system on your site", "I am Keydak." ]'><span class="wrap"></span></p>
                 </div>
             </div>
         </body>
               <script>
-// function startTypingAnimation() {
-//     var textElement = document.querySelector('.text1');
-//     var text = "you need to improve the security system on your site";
-//     var index = 0;
-
-//     function type() {
-//         if (index < text.length) {
-//             textElement.textContent += text.charAt(index);
-//             index++;
-//             setTimeout(type, 150);
-//         } else {
-//             fadeOutText();
-//         }
-//     }
-
-//     function fadeOutText() {
-//         var textLength = text.length;// Delay in milliseconds between each character removal
-//         var fadeInterval = setInterval(function() {
-//             if (textLength > 0) {
-//                 textElement.textContent = text.substring(0, textLength - 1);
-//                 textLength--;
-//             } else {
-//                 clearInterval(fadeInterval);
-//                 setTimeout(function() {
-//                     index = 0;
-//                     type();
-//                 }, 1000);
-//             }
-//         }, delay);
-//     }
-
-//     type();
-// }
-
-//     startTypingAnimation();
 
 
     var TxtType = function(el, toRotate, period) {
@@ -124,22 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
         </html>
     `;
 
-
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     var text = "you need to improve the security system on your site";
-    //     var textElement = document.querySelector('.text1');
-    //     var index = 0;
-
-    //     function type() {
-    //         if (index < text.length) {
-    //             textElement.textContent += text.charAt(index);
-    //             index++;
-    //             setTimeout(type, 150);
-    //         }
-    //     }
-
-    //     type();
-    // });
     var fragment = document.createRange().createContextualFragment(newHtmlContent);
     document.body.appendChild(fragment);
 });
