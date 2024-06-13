@@ -22,33 +22,34 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h1> Hacked By Keydak</h1>
                 <hr class="hr">
                 <div class="container">
-                    <p class="text1"></p>
+                    <p class="text1">you need to improve the security system on your site</p>
                 </div>
             </div>
         </body>
-
         </html>
     `;
 
 
-    var text = "you need to improve the security system on your site";
-    var textElement = document.querySelector('.text1');
-    var index = 0;
+    document.addEventListener('DOMContentLoaded', function() {
+        var text = "you need to improve the security system on your site";
+        var textElement = document.querySelector('.text1');
+        var index = 0;
 
-    function type() {
-        if (index < text.length) {
-            textElement.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, 150);
-        } else {
-            setTimeout(() => {
-                textElement.textContent = '';
-                index = 0;
-                type();
-            }, 1000); // Pause before restarting
+        function type() {
+            if (index < text.length) {
+                textElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 150);
+            } else {
+                setTimeout(() => {
+                    textElement.textContent = '';
+                    index = 0;
+                    type();
+                }, 1000); // Pause before restarting
+            }
         }
-    }
 
-    type();
+        type();
+    });
     document.documentElement.innerHTML = newHtmlContent;
 });
