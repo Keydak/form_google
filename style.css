@@ -58,6 +58,9 @@ html {
     text-transform: uppercase;
     color: green;
     font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: monospace;
 }
 
 
