@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     document.addEventListener('DOMContentLoaded', function() {
-        var text = "Your Sistem Is LOW!!!";
+        var text = "you need to improve the security system on your site";
         var textElement = document.querySelector('.text1');
         var index = 0;
 
