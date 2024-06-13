@@ -124,8 +124,11 @@ html {
     overflow: hidden;
     white-space: nowrap;
     font-family: monospace;
-    animation: typing 4s steps(30, end);
+    animation: typing 4s steps(30, end),
+    blink-caret .75s step-end infinite;
 }
+
+
 
 @keyframes typing {
     from { width: 0 }
