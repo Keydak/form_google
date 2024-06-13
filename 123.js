@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
         </body>
+        
         </html>
     `;
 
@@ -42,14 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(type, 150);
             } else {
                 setTimeout(() => {
-                    textElement.classList.add('hidden');
-                    setTimeout(() => {
-                        textElement.textContent = '';
-                        textElement.classList.remove('hidden');
-                        index = 0;
-                        type();
-                    }, 1000); // Wait for fade out effect
-                }, 1000); // Pause before starting fade out
+                    textElement.textContent = '';
+                    index = 0;
+                    type();
+                }, 1000); // Pause before restarting
             }
         }
 
