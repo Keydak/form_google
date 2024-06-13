@@ -27,28 +27,36 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </body>
               <script>
-              // Function to handle the typing animation
+                   // Function to start the typing animation
                 function startTypingAnimation() {
                     var text = "you need to improve the security system on your site";
                     var textElement = document.querySelector('.text1');
+                    var containerWidth = textElement.parentNode.offsetWidth;
+                    var textWidth = textElement.offsetWidth;
 
-                    // Calculate animation duration based on text length
-                    var animationDuration = text.length * 150; // Adjust as needed
+                    // Calculate animation duration based on text width
+                    var animationDuration = (textWidth / containerWidth) * 4000; // 4s for full width
+
+                    // Apply animation duration to typing animation
+                    textElement.style.animationDuration = animationDuration + 'ms';
 
                     // Start typing animation
-                    textElement.style.animationDuration = animationDuration + 'ms';
                     textElement.classList.add('typing');
-
-                    // After animation ends, fade out and restart animation
-                    textElement.addEventListener('animationend', function() {
-                        textElement.classList.remove('typing');
-                        setTimeout(function() {
-                            textElement.classList.add('typing');
-                        }, 1000); // Wait before restarting animation
-                    });
                 }
 
-                startTypingAnimation(); // Call the function to start the animation
+                // Start typing animation when DOM content is loaded
+                document.addEventListener('DOMContentLoaded', function () {
+                    startTypingAnimation();
+
+                    // After animation ends, restart typing animation
+                    var textElement = document.querySelector('.text1');
+                    textElement.addEventListener('animationend', function () {
+                        textElement.classList.remove('typing');
+                        setTimeout(function () {
+                            textElement.classList.add('typing');
+                        }, 2000); // 2s delay before restarting animation
+                    });
+                });
             </script>
         </html>
     `;
