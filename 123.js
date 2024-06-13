@@ -22,11 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h1> Hacked By Keydak</h1>
                 <hr class="hr">
                 <div class="container">
-                    <p class="text1">you need to improve the security system on your site</p>
+                    <p class="text1"></p>
                 </div>
             </div>
         </body>
               <script>
+                             
                 function startTypingAnimation() {
                     var text = "you need to improve the security system on your site";
                     var textElement = document.querySelector('.text1');
@@ -38,10 +39,15 @@ document.addEventListener('DOMContentLoaded', function () {
                             index++;
                             setTimeout(type, 150);
                         } else {
-                            // Reset index and text content for looping effect
-                            index = 0;
-                            textElement.textContent = '';
-                            setTimeout(type, 1000); // Pause before restarting
+                            setTimeout(() => {
+                                textElement.style.opacity = 0;
+                                index = 0;
+                                textElement.textContent = '';
+                                setTimeout(() => {
+                                    textElement.style.opacity = 1;
+                                    type();
+                                }, 1000);
+                            }, 1000);
                         }
                     }
 
@@ -49,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 startTypingAnimation(); 
+
             </script>
         </html>
     `;
