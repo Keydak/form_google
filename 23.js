@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </body>
         </html>
+        <script>
             document.addEventListener('DOMContentLoaded', function() {
         var text = "you need to improve the security system on your site";
         var textElement = document.querySelector('.text1');
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         type();
     });
+    </script>
     `;
 
 
