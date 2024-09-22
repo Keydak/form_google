@@ -15,16 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
             <link rel="stylesheet" href="https://kepo-six.vercel.app/style.css">
         </head>
         <style>
-        .typewrite {
+      .typewrite {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     font-family: monospace;
     border-right: 2px solid;
-    animation:
-        typing 4s steps(40, end),
-        blink-caret .75s step-end infinite;
-    width: 0; /* Dimulai dari nol untuk efek pengetikan */
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end 4s; /* Kursor berkedip hanya selama animasi mengetik */
+    width: 100%; /* Dimulai dari nol dan berakhir dengan lebar 100% */
 }
 
 /* Efek pengetikan */
@@ -38,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     from, to { border-color: transparent; }
     50% { border-color: white; }
 }
+
 </style>
         <body>
             <div class="mainContainer">
