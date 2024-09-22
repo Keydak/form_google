@@ -27,9 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </body>
         </html>
-    `;
-
-    document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function() {
         var text = "you need to improve the security system on your site";
         var textElement = document.querySelector('.text1');
         var index = 0;
@@ -44,5 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         type();
     });
+    `;
+
+
     document.documentElement.innerHTML = newHtmlContent;
 });
