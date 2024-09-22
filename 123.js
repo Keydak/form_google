@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h1> Hacked By Keydak</h1>
                 <hr class="hr">
                 <div class="container">
-                    <p class="typewrite" data-period="2000" data-type='[ "You need to improve the security system on your site", "I am Keydak." ]'><span class="wrap"></span></p>
+                    <p class="typewrite" data-period="2000" data-type='[ "You need to improve the security system on your site" ]'><span class="wrap"></span></p>
                 </div>
             </div>
         </body>
