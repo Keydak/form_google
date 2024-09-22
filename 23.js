@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
     white-space: nowrap;
     font-family: monospace;
     border-right: 2px solid;
-    animation: typing 4s steps(40, end), blink-caret 0.75s step-infinite 4s; /* Kursor berkedip hanya selama animasi mengetik */
-    width: 100%; /* Dimulai dari nol dan berakhir dengan lebar 100% */
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite; /* Kursor berkedip terus-menerus */
+    width: 100%; /* Pastikan teks penuh */
 }
 
 /* Efek pengetikan */
@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     from, to { border-color: transparent; }
     50% { border-color: white; }
 }
+
 
 </style>
         <body>
